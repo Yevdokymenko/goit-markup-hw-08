@@ -1,0 +1,43 @@
+.header-contact {
+  &__list {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__item {
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+    transition: color var(--animation);
+  }
+
+  &__icon {
+    fill: #757575;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: fill var(--animation);
+  }
+}
+
+.header__section {
+  display: flex;
+}
+
+.header-contact__link:hover .header-contact__icon,
+.header-contact__link:focus .header-contact__icon {
+  fill: var(--accent-color);
+}

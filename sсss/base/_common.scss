@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  background-color: var(--white-background-color);
+  color: var(--primary-text-color);
+}
+
+/* зображення переводи з лінійних в блочні */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a:focus {
+  outline: none;
+}

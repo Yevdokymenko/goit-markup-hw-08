@@ -1,0 +1,41 @@
+address {
+  font-style: normal;
+}
+
+/* Прибираю оформлення посилання */
+a {
+  text-decoration: none;
+}
+
+/* Прибираю точки в списку */
+ul {
+  list-style-type: none;
+}
+
+/* прибираєм зайве в посилланнях та списку */
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Прибираємо всі відступи (обнуляємо показники) */
+h1,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
