@@ -1,6 +1,34 @@
 .clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+  }
+
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__link {
@@ -9,7 +37,7 @@
     justify-content: center;
     border: 1px solid rgba(175, 177, 184, 1);
     border-radius: 4px;
-    width: 170px;
+    width: 210px;
     height: 92px;
     transition: border var(--animation);
 
@@ -17,13 +45,47 @@
     &:focus {
       border: 1px solid var(--accent-color);
     }
+
+    @media screen and (min-width: 768px) {
+      width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
   }
 
   &__item {
-    margin-right: 30px;
+    margin: 15px;
 
-    &:last-child {
-      margin-right: 0px;
+    @media screen and (max-width: 767px) {
+      &:nth-child(2n-1) {
+        margin-left: 0;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      &:nth-child(3n-2) {
+        margin-left: 0;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      &:first-child {
+        margin-left: 0px;
+      }
     }
   }
 
