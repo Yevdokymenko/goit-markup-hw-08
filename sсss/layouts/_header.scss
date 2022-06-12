@@ -1,14 +1,23 @@
 .header-contact {
-  &__list {
-    display: flex;
-    margin-left: auto;
+  display: flex;
 
-    @media screen and (max-width: 767.98px) {
-      display: none;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-      flex-direction: column;
-      align-content: center;
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    flex-direction: column;
+    margin: 21px 0px;
+  }
+
+  &__list {
+    margin-left: auto;
+  }
+
+  &__item + &__item {
+    margin-left: 50px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-left: 0px;
     }
   }
 
@@ -17,12 +26,22 @@
 
     &:last-child {
       margin-right: 0px;
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 10px;
+        margin-right: auto;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      margin-left: 0px;
+      margin-right: auto;
     }
   }
 
   &__link {
-    display: flex;
-    align-items: center;
+    display: inline-flex;
+
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -30,6 +49,10 @@
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
     transition: color var(--animation);
+
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      padding: 0px;
+    }
   }
 
   &__icon {
@@ -56,8 +79,9 @@
     padding-left: 15px;
     padding-right: 15px;
 
-    @media screen and (max-width: 767.98px) {
-      max-width: 767px;
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      max-width: 768px;
+      max-height: 80px;
     }
   }
 }

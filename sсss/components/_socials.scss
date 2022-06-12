@@ -1,7 +1,5 @@
 .studio-social {
   display: block;
-
-  margin-top: 60px;
   text-align: left;
 
   @media (min-width: 768px) {
@@ -9,7 +7,35 @@
   }
 
   @media screen and (min-width: 1200px) {
-    margin-top: 72px;
+  }
+
+  &__title-div {
+    display: block;
+    @media screen and (max-width: 1199.98px) {
+      text-align: center;
+      padding-top: 10px;
+    }
+  }
+
+  &__title {
+    height: 16px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14px;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+
+    @media screen and (max-width: 1199.98px) {
+      align-content: center;
+      justify-content: center;
+    }
+
+    @media (min-width: 1200px) {
+      text-align: left;
+      padding-bottom: 0px;
+      padding-top: 10px;
+    }
   }
 
   &__list {
@@ -53,27 +79,9 @@
   fill: var(--white-text-color);
 }
 
-.studio-social__title {
-  padding: 20px 0px 10px 0px;
-  margin-top: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14px;
-  text-transform: uppercase;
-  color: var(--white-text-color);
-
-  @media (min-width: 768px) {
-    padding-bottom: 10px;
-  }
-  @media (min-width: 1200px) {
-    text-align: left;
-  }
-}
-
 .studio-social__list {
   display: flex;
   width: 206px;
-  height: 80px;
 }
 
 .team-list__social-list {
