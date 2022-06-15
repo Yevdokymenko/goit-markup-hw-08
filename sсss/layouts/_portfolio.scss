@@ -29,6 +29,11 @@
     grid-template-columns: auto auto auto;
   }
 
+  &__item {
+    background: #fff;
+    width: 370px;
+  }
+
   &__card-content {
     padding: 20px 24px;
     border: 1px solid #eeeeee;
@@ -36,6 +41,9 @@
   }
 
   &__description {
+    display: block;
+    width: 100%;
+    height: auto;
     position: relative;
     overflow: hidden;
   }

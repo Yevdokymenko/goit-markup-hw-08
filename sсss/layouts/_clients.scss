@@ -46,6 +46,10 @@
       border: 1px solid var(--accent-color);
     }
 
+    @media screen and (max-width: 479.98px) {
+      width: auto;
+    }
+
     @media screen and (min-width: 768px) {
       width: 226px;
     }
@@ -58,7 +62,7 @@
   &__item {
     margin: 15px;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
       &:nth-child(2n-1) {
         margin-left: 0;
       }

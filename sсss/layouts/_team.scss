@@ -82,6 +82,12 @@
     }
   }
 
+  &__photo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   &__units {
     padding: 30px 0px;
   }

@@ -7,6 +7,11 @@
   right: 0;
   padding: 15px 10px 48px 40px;
   z-index: 999;
+
+  @media screen and (max-width: 479.98px) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .flex {
@@ -48,7 +53,7 @@
   border: none;
   margin-left: auto;
   cursor: pointer;
-  margin-right: 15px;
+  margin-right: 5px;
 
   &:hover,
   &:focus {
@@ -106,6 +111,10 @@
   display: flex;
   flex-direction: row;
   column-gap: 20px;
+
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
 }
 
 .mob-menu__social-item {
