@@ -152,6 +152,7 @@
 .modal-form__checkbox-policy {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 12px;
   line-height: 14px;
@@ -162,6 +163,17 @@
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 24px;
+  }
+}
+
+.modal-form__policy-link {
+  display: flex;
+  margin-left: 3px;
+  color: var(--accent-color);
+  text-decoration: underline;
+
+  @media screen and (max-width: 446px) {
+    margin-left: 0px;
   }
 }
 
@@ -192,9 +204,4 @@
   background-position: center;
   outline: transparent;
   border: none;
-}
-
-.modal-form__policy-link {
-  color: var(--accent-color);
-  text-decoration: underline;
 }

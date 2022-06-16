@@ -101,12 +101,12 @@ li {
   min-width: 320px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
     width: 480px;
   }
 }
@@ -687,6 +687,8 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -701,6 +703,21 @@ li {
   .modal-form__checkbox-policy {
     font-size: 14px;
     line-height: 24px;
+  }
+}
+
+.modal-form__policy-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 3px;
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 446px) {
+  .modal-form__policy-link {
+    margin-left: 0px;
   }
 }
 
@@ -734,11 +751,6 @@ li {
   border: none;
 }
 
-.modal-form__policy-link {
-  color: var(--accent-color);
-  text-decoration: underline;
-}
-
 .backdrop {
   position: fixed;
   display: -webkit-box;
@@ -770,7 +782,7 @@ li {
 }
 
 .modal {
-  width: 450px;
+  width: 100%;
   min-height: 609px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -784,6 +796,12 @@ li {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -991,8 +1009,15 @@ li {
 
 /* Оформлення заголовків */
 .section {
+  width: 500px;
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+@media screen and (min-width: 480px) {
+  .section {
+    width: auto;
+  }
 }
 
 .section__title {
@@ -1189,7 +1214,14 @@ li {
 }
 
 .header {
+  width: 500px;
   border-bottom: 1px solid #ececec;
+}
+
+@media screen and (min-width: 480px) {
+  .header {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1226,6 +1258,7 @@ li {
 }
 
 .hero {
+  width: 500px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -1258,6 +1291,12 @@ li {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/main-page/hero-tablet2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-page/hero-tablet2x.jpg");
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .hero {
+    width: auto;
   }
 }
 
@@ -1716,8 +1755,15 @@ li {
 }
 
 .portfolio {
+  width: 500px;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 480px) {
+  .portfolio {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1737,12 +1783,15 @@ li {
 .portfolio-list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+  -ms-grid-columns: ()[auto-fill];
+      grid-template-columns: repeat(auto-fill);
   gap: 30px 30px;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 480px) {
@@ -1768,7 +1817,6 @@ li {
 
 .portfolio-list__item {
   background: #fff;
-  width: 370px;
 }
 
 .portfolio-list__card-content {
@@ -1779,7 +1827,7 @@ li {
 
 .portfolio-list__description {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
   position: relative;
   overflow: hidden;
@@ -1800,6 +1848,12 @@ li {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list__item-photo {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .portfolio-list__item-description {
@@ -1936,9 +1990,16 @@ li {
 
 .footer {
   min-width: 320px;
+  width: 500px;
   text-align: center;
   padding: 60px 0px;
   background-color: var(--hero-background-color);
+}
+
+@media screen and (min-width: 480px) {
+  .footer {
+    width: auto;
+  }
 }
 
 .footer__flex {
